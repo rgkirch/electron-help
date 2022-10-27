@@ -8,10 +8,10 @@
   (set! main-window (BrowserWindow.
                      (clj->js {:width 800
                                :height 600
-                               :webPreferences {:nodeIntegration true
+                               :webPreferences {;; :nodeIntegration true
                                                 ;; :contextIsolation true
                                                 ;; :enableRemoteModule false
-                                                :preload (path/join js/__dirname "preload.js")}
+                                                :preload (path/join js/__dirname "preload/js/preload.js")}
                                ;; :transparent true
                                :backgroundColor "#dddddd"})))
 

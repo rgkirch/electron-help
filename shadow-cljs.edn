@@ -6,15 +6,13 @@
                  :output-to "resources/main.js"
                  :main app.main.core/main}
 
-          :preload {:target :node-script
-                    :output-to "resources/preload.js"
+          :preload {:target :esm
+                    :output-dir "resources/preload/js"
                     :main app.preload.core/main
-                    :hashbang false}
+                    :modules {:preload {:entries [app.preload.core]}}}
 
           :renderer {:target :browser
                      :devtools {:watch-dir "resources/public"}
                      :output-dir "resources/public/js"
                      :asset-path "js"
-                     :modules {:renderer {:entries [app.renderer.core]
-                                          ;; :init-fn app.renderer.core/main
-                                          }}}}}
+                     :modules {:renderer {:entries [app.renderer.core]}}}}}
