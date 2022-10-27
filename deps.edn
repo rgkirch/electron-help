@@ -1,0 +1,14 @@
+{:paths ["src"]
+ :deps {binaryage/devtools {:mvn/version "1.0.6"}
+        philoskim/debux {:mvn/version "0.8.2"}
+        com.cognitect/transit-cljs {:mvn/version "0.8.280"}
+        org.clojure/clojure {:mvn/version "1.11.1"}
+        org.clojure/clojurescript {:mvn/version "1.11.60"}
+        com.google.javascript/closure-compiler-unshaded {:mvn/version "v20220803"}}
+ :aliases {:dev {:extra-paths ["src-dev"]
+                 :extra-deps {binaryage/devtools {:mvn/version "1.0.6"}
+                              cider/cider-nrepl {:mvn/version "0.28.4"}
+                              com.cemerick/pomegranate {:mvn/version "1.1.0"}
+                              nrepl/nrepl {:mvn/version "0.9.0-beta3"}
+                              thheller/shadow-cljs {:mvn/version "2.20.5"}
+                              refactor-nrepl/refactor-nrepl {:mvn/version "3.5.4"}}}}}

@@ -1,0 +1,20 @@
+{:deps {:aliases [:dev]}
+
+ :dev-http {8080 "resources/public/"}
+
+ :builds {:main {:target :node-script
+                 :output-to "resources/main.js"
+                 :main app.main.core/main}
+
+          :preload {:target :node-script
+                    :output-to "resources/preload.js"
+                    :main app.preload.core/main
+                    :hashbang false}
+
+          :renderer {:target :browser
+                     :devtools {:watch-dir "resources/public"}
+                     :output-dir "resources/public/js"
+                     :asset-path "js"
+                     :modules {:renderer {:entries [app.renderer.core]
+                                          ;; :init-fn app.renderer.core/main
+                                          }}}}}

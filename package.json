@@ -1,0 +1,20 @@
+{
+  "name": "electron-help",
+  "version": "0.0.1",
+  "description": "electron help",
+  "main": "resources/main.js",
+  "scripts": {
+    "dev": "shadow-cljs watch main preload renderer",
+    "build": "shadow-cljs compile main preload renderer",
+    "clean": "rm -rf resources/public/js/* && rm -rf target"
+  },
+  "dependencies": {
+    "electron": "^20.1.0",
+    "electron-packager": "^16.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "shadow-cljs": "^2.20.2"
+  }
+}

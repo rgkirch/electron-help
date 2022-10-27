@@ -1,0 +1,6 @@
+#+title: Readme
+* Setup!
+: npm install
+* Run!
+: npm run dev
+: npx electron .
